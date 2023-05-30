@@ -29,7 +29,8 @@ def openai_create(messages):
     return completion.choices[0].message.content
 
 def openai_create_gpt4(messages):
-    openai.api_key = "EMPTY"  # Not support yet
+    openai.api_key = os.environ.get('OPENAI_KEY') # Not support yet
+    openai.api_base = "https://api.openai.com"
 
     model = "gpt-4"
 
