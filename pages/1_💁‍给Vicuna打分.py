@@ -48,7 +48,7 @@ def insert_one(prompt, result1, result2, selected):
 
 
 
-st.title("Vicuna-13B格式保持")
+st.title("Vicuna-13B打分")
 input_words = st.text_area("请输入问题:", key="question_input")
 
 prompt = [{"role": "user", "content": input_words}]
