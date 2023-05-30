@@ -67,12 +67,12 @@ if st.button("确认", key="word_gpt3"):
 
             with col1:
                 st.markdown(result1)
-                if button("选择答案 1"):
+                if button("选择答案 1", key="select_1"):
                     insert_one(input_words, result1, result2, "left")
 
             with col2:
                 st.markdown(result2)
-                if button("选择答案 2"):
+                if button("选择答案 2", key="select_2"):
                     insert_one(input_words, result1, result2, "right")
 
 
