@@ -3,6 +3,7 @@ import streamlit as st
 import openai
 import json
 from streamlit_extras.stateful_button import button
+import os
 
 MONGO_URL_findOne = os.environ.get('MONGO_URL_findOne')
 MONGO_URL_updateOne = os.environ.get('MONGO_URL_updateOne')
