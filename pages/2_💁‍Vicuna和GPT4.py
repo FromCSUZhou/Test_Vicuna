@@ -30,7 +30,7 @@ def openai_create(messages):
 
 def openai_create_gpt4(messages):
     openai.api_key = os.environ.get('OPENAI_KEY') # Not support yet
-    openai.api_base = "https://api.openai.com/v1/chat/completions"
+    openai.api_base = "https://api.openai.com/v1"
 
     model = "gpt-4"
 
