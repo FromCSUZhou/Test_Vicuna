@@ -10,7 +10,7 @@ MONGO_URL_updateOne = os.environ.get('MONGO_URL_updateOne')
 MONGO_URL_insertOne = os.environ.get('MONGO_URL_insertOne')
 MONGO_KEY = os.environ.get('MONGO_KEY')
 
-st.info("vicuna-13b模型测试")
+st.info("chatgpt for finance模型测试")
 
 
 def openai_create(messages):
@@ -48,7 +48,7 @@ def insert_one(prompt, result1, result2, selected):
 
 
 
-st.title("Vicuna-13B打分")
+st.title("chatgpt for finance打分")
 input_words = st.text_area("请输入问题:", key="question_input")
 
 prompt = [{"role": "user", "content": input_words}]

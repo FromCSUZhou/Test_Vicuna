@@ -2,14 +2,14 @@ import streamlit as st
 from streamlit_chat import message
 import openai
 
-st.info("vicuna-13b模型测试")
+st.info("chatgpt for finance模型测试")
 
 
 def openai_create(messages):
         openai.api_key = "EMPTY"  # Not support yet
-        openai.api_base = "http://localhost:38080/v1"
+        openai.api_base = "http://localhost:8000/v1"
 
-        model = "vicuna-13b"
+        model = "vicuna-7b-v1.1"
 
         # create a chat completion
         completion = openai.ChatCompletion.create(
@@ -74,7 +74,7 @@ def conversation():
                 st.error("网络出错啦，请刷新或者输入clear清除上下文再试试吧~")
 
 def formatted():
-    st.title("Vicuna-13B格式保持")
+    st.title("chatgpt for finance格式保持")
     input_words = st.text_area("请输入问题:", key="question_input")
 
     prompt = [{"role": "user", "content": input_words}]
@@ -89,7 +89,7 @@ def formatted():
                         st.success("大功告成！")
                         st.markdown(result)
 
-tab1, tab2= st.tabs(["💻Vicuna-13B格式保持","💁‍与Vicuna-13B对话"])
+tab1, tab2= st.tabs(["💻chatgpt for finance格式保持","💁‍与chatgpt for finance对话"])
 
 with tab1:
     formatted()
