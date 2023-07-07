@@ -7,7 +7,7 @@ import threading
 from concurrent.futures import ThreadPoolExecutor
 from tenacity import retry, stop_after_attempt, wait_fixed
 
-openai.api_key = "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"
+openai.api_key = "openai_api_key"
 MAX_THREADS = 10
 
 conversation_id = 0  # 对话ID
