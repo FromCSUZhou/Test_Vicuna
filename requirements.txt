@@ -4,3 +4,4 @@ streamlit-chat
 pymongo
 requests
 streamlit-extras
+tenacity
